@@ -11,7 +11,7 @@ package Modelo.Participante;
 public class Participantes {
     public int cedula;
     public String nombre;
-    public int telefono;
+    public String telefono;
     public String correo;
 
     public int getCedula() {
@@ -22,7 +22,7 @@ public class Participantes {
         return nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
@@ -30,7 +30,7 @@ public class Participantes {
         return correo;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -38,7 +38,7 @@ public class Participantes {
         this.correo = correo;
     }
 
-    public Participantes(int cedula, String nombre, int telefono, String correo) {
+    public Participantes(int cedula, String nombre, String telefono, String correo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -46,7 +46,7 @@ public class Participantes {
     }
 
     public Participantes() {
-        this(0,"",0,"");
+        this(0,"","","");
         
     }
     

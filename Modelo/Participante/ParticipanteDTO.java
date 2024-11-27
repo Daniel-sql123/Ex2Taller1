@@ -11,7 +11,7 @@ package Modelo.Participante;
 public class ParticipanteDTO {
     private final int cedula;
     private final String nombre;
-    private final int telefono;
+    private final String telefono;
     private final String correo;
 
     public int getCedula() {
@@ -22,7 +22,7 @@ public class ParticipanteDTO {
         return nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
@@ -30,13 +30,11 @@ public class ParticipanteDTO {
         return correo;
     }
 
-    public ParticipanteDTO(int cedula, String nombre, int telefono, String correo) {
+    public ParticipanteDTO(int cedula, String nombre, String telefono, String correo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
     }
-    
-    
     
 }
