@@ -4,7 +4,7 @@
  */
 package Modelo.Participante;
 
-import Model.Dao.Dao;
+import Dao.Dao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
