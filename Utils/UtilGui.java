@@ -11,7 +11,11 @@ import javax.swing.JTextField;
 
 /**
  *
+<<<<<<< HEAD
  * @author crisp
+=======
+ * @author Student
+>>>>>>> 0982b362e63a2e4955184a6dac6b593e3dbfc860
  */
 public class UtilGui {    
     public static boolean validateFields(JComponent... components) {

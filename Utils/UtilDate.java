@@ -9,7 +9,11 @@ import java.time.format.DateTimeParseException;
 import java.util.Locale;
 /**
  *
+<<<<<<< HEAD
  * @author crisp
+=======
+ * @author Student
+>>>>>>> 0982b362e63a2e4955184a6dac6b593e3dbfc860
  */
 public class UtilDate {
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.getDefault());
