@@ -28,38 +28,51 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        BtnInscripciones = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        BtnInscripciones.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        BtnInscripciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/enrollment (1).png"))); // NOI18N
+        BtnInscripciones.setText("Inscripciones");
+        BtnInscripciones.setContentAreaFilled(false);
+        BtnInscripciones.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BtnInscripciones.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/enrollment (1).png"))); // NOI18N
+        BtnInscripciones.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/enrollment.png"))); // NOI18N
+        BtnInscripciones.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        BtnInscripciones.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BtnInscripciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnInscripcionesActionPerformed(evt);
+            }
+        });
+
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(BtnInscripciones, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(291, 291, 291)
+                .addGap(228, 228, 228)
+                .addComponent(BtnInscripciones, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addContainerGap(363, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(jLabel1)
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(176, 176, 176)
+                        .addComponent(jLabel1))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(BtnInscripciones, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,6 +87,13 @@ public class FrmMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnInscripcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInscripcionesActionPerformed
+        // TODO add your handling code here:
+        FrmInscripciones frm = new FrmInscripciones();
+        jDesktopPane1.add(frm);
+        frm.show();
+    }//GEN-LAST:event_BtnInscripcionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,10 +131,8 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnInscripciones;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
