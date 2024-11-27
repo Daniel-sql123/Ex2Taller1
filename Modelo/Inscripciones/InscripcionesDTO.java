@@ -15,7 +15,7 @@ import java.sql.Date;
 public class InscripcionesDTO {
     private final int id;
     private final String taller;
-    private final String participate;
+    private final String participante;
     private final Date fecha;
     private final String asistencia;
 
@@ -27,8 +27,8 @@ public class InscripcionesDTO {
         return taller;
     }
 
-    public String getParticipate() {
-        return participate;
+    public String getParticipante() {
+        return participante;
     }
 
     public Date getFecha() {
@@ -42,7 +42,7 @@ public class InscripcionesDTO {
     public InscripcionesDTO(int id, String taller, String participate, Date fecha, String asistencia) {
         this.id = id;
         this.taller = taller;
-        this.participate = participate;
+        this.participante = participate;
         this.fecha = fecha;
         this.asistencia = asistencia;
     }

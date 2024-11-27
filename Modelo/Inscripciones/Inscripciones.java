@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Inscripciones {
     private int id;
     private Taller taller;
-    private Participantes participate;
+    private Participantes participante;
     private LocalDate fecha;
     private String asistencia;
 
@@ -27,8 +27,8 @@ public class Inscripciones {
         return taller;
     }
 
-    public Participantes getParticipate() {
-        return participate;
+    public Participantes getParticipante() {
+        return participante;
     }
 
     public LocalDate getFecha() {
@@ -46,14 +46,14 @@ public class Inscripciones {
     protected Inscripciones(int id, Taller taller, Participantes participate, LocalDate fecha, String asistencia) {
         this.id = id;
         this.taller = taller;
-        this.participate = participate;
+        this.participante = participate;
         this.fecha = fecha;
         this.asistencia = asistencia;
     }
      public Inscripciones( Taller taller, Participantes participate, LocalDate fecha, String asistencia) {
         this.id = 0;
         this.taller = taller;
-        this.participate = participate;
+        this.participante = participate;
         this.fecha = fecha;
         this.asistencia = asistencia;
     }

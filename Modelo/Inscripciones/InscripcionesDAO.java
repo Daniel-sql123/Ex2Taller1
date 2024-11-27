@@ -30,7 +30,7 @@ public class InscripcionesDAO extends Dao<InscripcionesDTO> {
         if (dto == null || !validateFkTaller(dto.getTaller()) || !validateFkParticipantes(dto.getParticipate())) {
             return false;
         }
-        String query = "Call InscripcionesCreate(?,?,?,?)";
+        String query = "Call InscripcionesCreate(?,?,?,?,?)";
         try ( PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, dto.getId());
             stmt.setString(2, dto.getTaller());
