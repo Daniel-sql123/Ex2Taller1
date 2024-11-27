@@ -22,7 +22,7 @@ public class ParticipantesDAO extends Dao<ParticipanteDTO> {
         if (dto == null || !validatePK(dto.getCedula())) {
             return false;
         }
-        String query = "Call CustomerCreate(?,?,?,?,?)";
+        String query = "Call ParticipanteCreate(?,?,?,?,?)";
         try ( PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, dto.getCedula());
             stmt.setString(2, dto.getNombre());
@@ -37,7 +37,7 @@ public class ParticipantesDAO extends Dao<ParticipanteDTO> {
         if (cedula == null || String.valueOf(cedula).trim().isEmpty()) {
             return null;
         }
-        String query = "Call CustomerRead(?)";
+        String query = "Call ParticipanteRead(?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, String.valueOf(cedula));
             try (ResultSet rs = stmt.executeQuery()) {
@@ -55,7 +55,7 @@ public class ParticipantesDAO extends Dao<ParticipanteDTO> {
 
     @Override
     public List<ParticipanteDTO> readAll() throws SQLException {
-  String query = "Call CustomerReadAll()";
+  String query = "Call ParticipanteReadAll()";
         List<ParticipanteDTO> list = new ArrayList<>();
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
 
@@ -76,7 +76,7 @@ public class ParticipantesDAO extends Dao<ParticipanteDTO> {
            if (dto == null) {
             return false;
         }
-        String query = "Call CustomerUpdate(?,?,?)";
+        String query = "Call ParticipanteUpdate(?,?,?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, dto.getCedula());
             stmt.setString(2, dto.getNombre());
@@ -91,7 +91,7 @@ public class ParticipantesDAO extends Dao<ParticipanteDTO> {
          if (cedula == null || String.valueOf(cedula).trim().isEmpty()) {
             return false;
         }
-        String query = "Call CustomerDelete(?)";
+        String query = "Call ParticipanteDelete(?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, String.valueOf(cedula));
             return stmt.executeUpdate() > 0;
