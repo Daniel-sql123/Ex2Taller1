@@ -4,7 +4,7 @@
  */
 package Modelo.Taller;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  *
@@ -15,7 +15,7 @@ public class TallerDTO {
     private final String nombre;
     private final Date fecha;
     private final String lugar;
-    private final int capacidad;
+    private final String capacidad;
 
     public int getId() {
         return id;
@@ -33,11 +33,11 @@ public class TallerDTO {
         return lugar;
     }
 
-    public int getCapacidad() {
+    public String getCapacidad() {
         return capacidad;
     }
 
-    public TallerDTO(int id, String nombre, Date fecha, String lugar, int capacidad) {
+    public TallerDTO(int id, String nombre, Date fecha, String lugar, String capacidad) {
         this.id = id;
         this.nombre = nombre;
         this.fecha = fecha;

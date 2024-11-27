@@ -15,7 +15,7 @@ public class Taller {
     private String nombre;
     private LocalDate fecha;
     private String lugar;
-    private int capacidad;
+    private String capacidad;
 
     public int getId() {
         return id;
@@ -33,15 +33,15 @@ public class Taller {
         return lugar;
     }
 
-    public int getCapacidad() {
+    public String getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(String capacidad) {
         this.capacidad = capacidad;
     }
 
-    protected Taller(int id, String nombre, LocalDate fecha, String lugar, int capacidad) {
+    protected Taller(int id, String nombre, LocalDate fecha, String lugar, String capacidad) {
         this.id = id;
         this.nombre = nombre;
         this.fecha = fecha;
@@ -49,7 +49,7 @@ public class Taller {
         this.capacidad = capacidad;
     }
 
-    public Taller(String nombre, LocalDate fecha, String lugar, int capacidad) {
+    public Taller(String nombre, LocalDate fecha, String lugar, String capacidad) {
         this.id = 0;
         this.nombre = nombre;
         this.fecha = fecha;
