@@ -17,7 +17,7 @@ public class Inscripciones {
     private Taller taller;
     private Participantes participate;
     private LocalDate fecha;
-    private boolean asistencia;
+    private String asistencia;
 
     public int getId() {
         return id;
@@ -35,27 +35,22 @@ public class Inscripciones {
         return fecha;
     }
 
-    public boolean isAsistencia() {
+    public String getAsistencia() {
         return asistencia;
     }
 
-    public void setParticipate(Participantes participate) {
-        this.participate = participate;
-    }
-
-    public void setAsistencia(boolean asistencia) {
+    public void setAsistencia(String asistencia) {
         this.asistencia = asistencia;
     }
 
-    protected Inscripciones(int id, Taller taller, Participantes participate, LocalDate fecha, boolean asistencia) {
+    protected Inscripciones(int id, Taller taller, Participantes participate, LocalDate fecha, String asistencia) {
         this.id = id;
         this.taller = taller;
         this.participate = participate;
         this.fecha = fecha;
         this.asistencia = asistencia;
     }
-    
-     public Inscripciones( Taller taller, Participantes participate, LocalDate fecha, boolean asistencia) {
+     public Inscripciones( Taller taller, Participantes participate, LocalDate fecha, String asistencia) {
         this.id = 0;
         this.taller = taller;
         this.participate = participate;

@@ -5,6 +5,7 @@
 package Modelo.Participante;
 
 import Dao.Dao;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,10 @@ import java.util.List;
  */
 public class ParticipantesDAO extends Dao<ParticipanteDTO> {
 
+    public ParticipantesDAO(Connection connection) {
+        super(connection);
+    }
+    
     @Override
     public boolean create(ParticipanteDTO dto) throws SQLException {
         if (dto == null || !validatePK(dto.getCedula())) {
